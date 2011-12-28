@@ -4,20 +4,24 @@
      <meta charset="utf-8">
      
      <script>
-    // Create a simple text notification:
-    var notification = webkitNotifications.createNotification(
-      '48.png',  // icon url - can be relative
-      'Hello!',  // notification title
-      'Lorem ipsum...'  // notification body text
-    );
-    
-    // Or create an HTML notification:
-    var notification = webkitNotifications.createHTMLNotification(
-      'notification.html'  // html url - can be relative
-    );
-    
-    // Then show the notification.
-    notification.show();
+    	// Create a simple text notification:
+    	var notification = webkitNotifications.createNotification(
+      		'48.png',
+      		'You Are Dreaming!?',
+      		'Look at Your Hands, look around and think if this is not a dream?' 
+    	);
+	var timeout = 1000 * 60 * 60;
+    	function showNotification(){
+    		// Then show the notification.
+    		notification.show();
+			setTimeout(function(){
+				notification.cancel();
+			}, 2500);
+
+		setTimeout(showNotification, timeout);
+	};
+	showNotification();	
+
      </script>
 </head>
 <body>
