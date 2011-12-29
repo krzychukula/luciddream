@@ -1,6 +1,6 @@
 {
   "name": "Reality Checks Notifications",
-  "version": "1.0",
+  "version": "1.0.1",
   "description": "Helper to get Lucid Dream.",
   "background_page": "background.html",
   "icons": {
