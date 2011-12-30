@@ -4,23 +4,24 @@
      <meta charset="utf-8">
      
      <script>
-    	// Create a simple text notification:
-    	var notification = webkitNotifications.createNotification(
-      		'48.png',
-      		'You Are Dreaming!?',
-      		'Look at Your Hands, look around and think if this is not a dream?' 
-    	);
-	var timeout = 1000 * 60 * 60;
+    	// Create a simple text notification    	
     	function showNotification(){
+    		var notification = webkitNotifications.createNotification(
+	      		'48.png',
+	      		'You Are Dreaming!?',
+	      		'Look at Your Hands, look around and think if this is not a dream?' 
+	    	);
+		var timeout = 1000 * 60 * 60;
     		// Then show the notification.
     		notification.show();
-			setTimeout(function(){
-				notification.cancel();
-			}, 2500);
-
+    		//cancel after a minute
+		setTimeout(function(){
+			notification.cancel();
+		}, 60000);	
 		setTimeout(showNotification, timeout);
 	};
-	setTimeout(showNotification, 60000);	
+		
+	setTimeout(showNotification, 60000);
 
      </script>
 </head>
